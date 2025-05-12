@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính Online</title>
+    <link rel="stylesheet" href="trangchumaytinhthongdungstyle.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="screen" id="screen" disabled>
+        <div class="buttons">
+            <button onclick="clearScreen()">CA</button>
+            <button onclick="backspace()">←</button>
+            <button onclick="insert('%')">%</button>
+            <button class="operator" onclick="insert('/')">÷</button>
+
+            <button onclick="insert('7')">7</button>
+            <button onclick="insert('8')">8</button>
+            <button onclick="insert('9')">9</button>
+            <button class="operator" onclick="insert('*')">×</button>
+
+            <button onclick="insert('4')">4</button>
+            <button onclick="insert('5')">5</button>
+            <button onclick="insert('6')">6</button>
+            <button class="operator" onclick="insert('-')">−</button>
+
+            <button onclick="insert('1')">1</button>
+            <button onclick="insert('2')">2</button>
+            <button onclick="insert('3')">3</button>
+            <button class="operator" onclick="insert('+')">+</button>
+
+            <button onclick="insert('.')">.</button>
+            <button onclick="insert('0')">0</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <div class="description">
+        <h2>Máy Tính Online</h2>
+        <p>Máy tính bỏ túi là thiết bị điện tử rẻ tiền, nhỏ, dễ di động dùng để thực hiện những phép tính toán học cơ bản và phức tạp.</p>
+        <p>Phép cộng là một quy tắc toán học (toán tử) tác động lên hai đối tượng toán học (toán hạng). Kết quả là tạo ra một đối tượng toán học mới.</p>
+    </div>
+
+    <script src="trangchumaytinhjava.js"></script>
+</body>
+</html>

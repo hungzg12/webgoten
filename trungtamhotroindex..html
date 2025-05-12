@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoTech Support Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      .container {
+        position: relative;
+        height: 100vh;
+        background-image: url("img/nhung-van-de-thuong-gap-o-tong-dai-cskh-va-cach-giai-quyet.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .info {
+        background-color: rgba(0, 128, 0, 0.9);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+      }
+
+      .info h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+
+      .info ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+        text-align: left;
+      }
+
+      .info ul li {
+        margin-bottom: 10px;
+      }
+
+      .info .phone a {
+        display: block;
+        background-color: #005700;
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        margin: 5px 0;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .info .phone a:hover {
+        background-color: #003f00;
+      }
+      .support-section {
+        background-color: #26b31e;
+        color: #ffffff;
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .support-section h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ff84;
+        margin-bottom: 10px;
+      }
+
+      .support-section p {
+        font-size: 1.2rem;
+        color: #b0b0b0;
+        margin-bottom: 40px;
+      }
+
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .support-card {
+        background-color: #1c1c1c;
+        border: 2px solid #00ff84;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .support-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 20px rgba(0, 255, 132, 0.4);
+      }
+
+      .support-card .icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #00aaff;
+      }
+
+      .support-card h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      .steps-section {
+        background-image: url("hinhanhweb/images (2).jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .steps-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+
+      .steps-section h2 {
+        color: #00ff84;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .steps-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .step-item {
+        display: flex;
+        align-items: center;
+        background-color: rgba(28, 28, 28, 0.8);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 500px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .step-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 20px rgba(0, 255, 132, 0.4);
+      }
+
+      .step-icon {
+        font-size: 2.5rem;
+        color: #00aaff;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+
+      .step-content {
+        text-align: left;
+        flex-grow: 1;
+      }
+
+      .step-content h4 {
+        font-size: 1.2rem;
+        color: #00ff84;
+        margin-bottom: 5px;
+      }
+
+      .step-content p {
+        font-size: 1rem;
+        color: #ffffff;
+      }
+      .next-section {
+        background-color: #26b31e;
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .next-section h2 {
+        font-size: 2.5rem;
+        color: #00a859;
+        margin-bottom: 20px;
+      }
+
+      .next-section p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        background-color: #f0f0f0;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(28, 205, 105, 0.1);
+      }
+
+      .feature-card .icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        color: #00a859;
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .feature-card p {
+        font-size: 1rem;
+        color: #666;
+      }
+    </style>
+    <div class="container">
+      <div class="info">
+        <h1>Tổng đài hỗ trợ cung cấp thông tin GoTech Vietnam</h1>
+        <ul>
+          <li>Hỗ trợ đối tác tài xế</li>
+          <li>Hỗ trợ đối tác GoFood</li>
+          <li>Hỗ trợ đối tác GoMart</li>
+          <li>Hỗ trợ đặt xe GoTech nhanh</li>
+        </ul>
+        <div class="phone">
+          <a href="tel:0888508704">Gọi ngay: 0888 508 704</a>
+          <a href="tael:1900 000 001"
+            >Trong trường hợp quá tải hãy gọi: 1900 000 001</a
+          >
+        </div>
+      </div>
+    </div>
+    <section class="support-section">
+      <h2>Tổng đài hỗ trợ</h2>
+      <p>Cung cấp thông tin GoTech Việt Nam</p>
+      <div class="support-grid">
+        <div class="support-card">
+          <div class="icon">✔️</div>
+          <h3>Hướng dẫn đăng ký tài xế</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">💵</div>
+          <h3>Hướng dẫn đăng ký đối tác Go Mart</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">📊</div>
+          <h3>Hướng dẫn thanh toán</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">🌐</div>
+          <h3>Hướng dẫn đăng ký các gói hội viên</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">❓</div>
+          <h3>Giải đáp các thông tin khác</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">📦</div>
+          <h3>Hướng dẫn dịch vụ vận chuyển hàng hóa</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">💻</div>
+          <h3>Hỗ trợ gửi khiếu nại Go</h3>
+        </div>
+        <div class="support-card">
+          <div class="icon">👨‍🍳</div>
+          <h3>Hướng dẫn đăng ký đối tác Go Food</h3>
+        </div>
+      </div>
+    </section>
+    <div class="steps-section">
+      <h2>CÁC BƯỚC KẾT NỐI</h2>
+      <div class="steps-list">
+        <div class="step-item">
+          <span class="step-icon">📞</span>
+          <div class="step-content">
+            <h4>Bước 1</h4>
+            <p>Nhấc máy gọi 1900.000.001</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <span class="step-icon">😊</span>
+          <div class="step-content">
+            <h4>Bước 2</h4>
+            <p>Trình bày vấn đề với chuyên viên tư vấn</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <span class="step-icon">✔️</span>
+          <div class="step-content">
+            <h4>Bước 3</h4>
+            <p>Nghe chuyên viên tư vấn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next-section">
+      <h2>Dịch Vụ Tuyệt Vời Chúng Tôi Cung Cấp</h2>
+      <p>Khám phá những tiện ích nổi bật mà chúng tôi mang đến cho bạn.</p>
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">👨‍💻</div>
+          <h3>Hỗ Trợ Trực Tuyến</h3>
+          <p>Hỗ trợ khách hàng 24/7 với đội ngũ chuyên nghiệp.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🚀</div>
+          <h3>Dịch Vụ Nhanh Chóng</h3>
+          <p>Đáp ứng nhanh chóng mọi yêu cầu của bạn.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">💼</div>
+          <h3>Độ Tin Cậy Cao</h3>
+          <p>Cung cấp giải pháp an toàn và đáng tin cậy.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🌍</div>
+          <h3>Phạm Vi Toàn Cầu</h3>
+          <p>Hỗ trợ dịch vụ trên khắp mọi nơi bạn cần.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

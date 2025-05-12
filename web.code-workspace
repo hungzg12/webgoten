@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "H:/img boke"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "web"
+  }
+}
